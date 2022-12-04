@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* article {
+    height: 30%;
+    width: 25%;
+    display: flex;
+    flex: 3;
+} */
+
+/* -- part1 - folder -- */
+
+#folder {
+    top: 2%;
+    left: 1%;
+    width: 80px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 15px;
+    transition: height 2s ease;
+    text-align: center;
+}
+
+#folder:hover {
+    height: 95vh;
+}
+
+div#folder > span {
+    color: #fff;
+}
+
+/* -- part2 - spinning square -- */
+
+/* -- part3 - bouncing ball -- */
+
+/* -- part4 - loader -- */
+
+/* -- part5 - queue -- */
+
+/* -- part6 - 3d carousel -- */
