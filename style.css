@@ -3,12 +3,22 @@ body {
     flex-wrap: wrap;
 }
 
-/* article {
-    height: 30%;
-    width: 25%;
+article {
+    /* height: 30%;
+    width: 25%; */
     display: flex;
     flex: 3;
-} */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+article > section {
+    text-align: center;
+    width: 50%;
+    height: 25vh;
+    background-color: #bfbfbf;
+    border-radius: 15px;
+}
 
 /* -- part1 - folder -- */
 
@@ -32,6 +42,38 @@ div#folder > span {
 }
 
 /* -- part2 - spinning square -- */
+
+#square {
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+#square > div {
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 50%;
+    width: 13%; */
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    animation-name: spinning;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spinning {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform:rotate(360deg);
+        background-color: blue;
+    }
+    66% {
+        transform:rotate(720deg);
+        background-color: green;
+    }
+}
 
 /* -- part3 - bouncing ball -- */
 
