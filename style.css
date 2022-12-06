@@ -38,7 +38,7 @@ article > section {
 }
 
 #folder:hover {
-    height: 95vh;
+    height: 98vh;
 }
 
 div#folder > span {
@@ -62,9 +62,10 @@ div#folder > span {
     /* height: 50px;
     width: 50px; */
     background-color: red;
-    animation-name: spinning;
+    animation: 6s infinite spinning;
+    /* animation-name: spinning;
     animation-duration: 6s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
 
 @keyframes spinning {
@@ -91,9 +92,10 @@ div#folder > span {
     position: relative;
     top: 0;
     background-color: green;
-    animation-name: bouncing;
+    animation: 2s infinite bouncing;
+    /* animation-name: bouncing;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
 
 @keyframes bouncing {
@@ -133,9 +135,10 @@ div#folder > span {
     height: 80px;
     width: 80px;
     border-radius: 80px;
-    animation-name: loader;
+    animation: 2600ms /* 1800ms */ ease-in infinite loader;
+    /* animation-name: loader;
     animation-duration: 2600ms;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
     border: #000 solid 1px;
     margin-left: 3px;
 }
@@ -146,17 +149,17 @@ div#folder > span {
 
 #loader-container > div:nth-of-type(2) {
     background-color: #302f30;
-    animation-delay: 867ms;
+    animation-delay: 867ms /* 600ms */;
 }
 
 #loader-container > div:nth-of-type(3) {
     background-color: #767476;
-    animation-delay: 1733ms;
+    animation-delay: 1733ms /* 1200ms */;
 }
 
 @keyframes loader {
     from {
-        background-color: #d1d0d1;
+        background-color: #d1d0d1 /* white */;
     } to {
         background-color: black;
     }
@@ -164,4 +167,124 @@ div#folder > span {
 
 /* -- part5 - queue -- */
 
+#queue {
+    order: 6;
+    transform: translateY(-250px);
+}
+
+#queue-container > div {
+    height: 19px;
+    width: 19px;
+    border: .5px solid black;
+    border-radius: 6px;
+    position: absolute;
+    animation: 10s infinite queue ease-in-out /* ease-out */;
+    /* animation-name: queue;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; */
+    margin-left: 8px;
+    transform: translate(0px, -62px)
+    /* animation-name: loader; */
+    /* animation-duration: 2600ms; */
+}
+
+#queue-container > div:nth-of-type(1) {
+    background-color: gold;
+}
+
+#queue-container > div:nth-of-type(2) {
+    background-color: aqua;
+    animation-delay: /* 1100ms */ 500ms;
+}
+
+#queue-container > div:nth-of-type(3) {
+    background-color: darkred;
+    animation-delay: /* 2200ms */ 1000ms;
+}
+
+#queue-container > div:nth-of-type(4) {
+    background-color: lightsteelblue;
+    animation-delay: /* 3300ms */ 1500ms;
+}
+
+#queue-container > div:nth-of-type(5) {
+    background-color: orange;
+    animation-delay: /* 4400ms */ 2000ms;
+}
+
+#queue-container > div:nth-of-type(6) {
+    background-color: sienna;
+    animation-delay: /* 5500ms */ 2500ms;
+}
+
+@keyframes queue {
+    0% {
+        transform: translate(0px, -62px);
+        background-color: #fc9e86;
+    }
+    20% {
+        transform: translate(750px, -62px) rotate(360deg);
+        background-color: lightgreen;
+    }
+    60% {
+        transform: translate(750px, 153px) rotate(720deg);
+    }
+    70% {
+        transform: translate(0px, 153px) rotate(1080deg);
+    }
+    100% {
+        transform: translate(0px, -62px) rotate(1440deg);
+    }
+}
+
 /* -- part6 - 3d carousel -- */
+
+#carousel {
+    /* position: absolte; */
+    /* order: 5; */
+    height: 500px;
+}
+
+#carousel-container > div {
+    background-color: red;
+    height: 19px;
+    width: 19px;
+    border: .5px solid black;
+    border-radius: 6px;
+    /* animation-name: carousel; */
+    animation: 3s infinite carousel ease-in-out /* ease-out */;
+
+}
+
+#carousel-container > div:nth-of-type(1) {
+
+}
+
+#carousel-container > div:nth-of-type(2) {
+    
+}
+
+#carousel-container > div:nth-of-type(3) {
+    
+}
+
+#carousel-container > div:nth-of-type(4) {
+    
+}
+
+#carousel-container > div:nth-of-type(5) {
+    
+}
+
+#carousel-container > div:nth-of-type(6) {
+    
+}
+
+@keyframes carousel {
+    5% {
+        transform: translate(500px, 200px);
+    }
+    10% {
+        transform: translate(100px, 100px) rotate(360deg) skew();
+    }
+}
